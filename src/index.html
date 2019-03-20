@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <% if(!htmlWebpackPlugin.options.commons){%>
+        <link rel="stylesheet" href="./common/normalize.css">
+        <% }else{%>
+            <link rel="stylesheet" href="dist/common/normalize.css">
+        <%}%>
+    <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+    <div id="app"></div>
+    
+   <% if(!htmlWebpackPlugin.options.commons){%>
+    <script src="./js/react-dll.js"></script>
+    <% }else{%>
+    <script src="/dist/js/react-dll.js"></script>
+    <%}%>
+</body>
+</html>
